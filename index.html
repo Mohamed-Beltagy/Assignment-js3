@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="Fontawesome/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <h1 class="text-center my-5">Bookmarker</h1>
+    <div class="container book-section">
+        <h2 class="text-center my-4"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+                class="fa-solid fa-bookmark"></i></h2>
+        <div class="input-group mb-3 d-flex flex-column">
+            <label for="siteName"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+            <input oninput="validateSiteName()" id="siteName" type="text" class="form-control w-100" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3 d-flex flex-column">
+            <label for="siteURL"><i class="fa-solid fa-link"></i> Site URL</label>
+            <input oninput="validateSiteUrl()" id="siteURL" type="text" class="form-control w-100" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default">
+                <p id="error_text" class="d-none text-danger my-2">Url must start with https:// & end with .(domain extensions)</p>
+        </div>
+        <div class="button text-center my-4">
+            <button onclick="add()" class="btn btn-danger submit-btn">Submit</button>
+        </div>
+
+    </div>
+    <table class="table w-75 text-center m-auto my-4">
+        <thead>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+        </thead>
+        <tbody id="newRow">
+            
+        </tbody>
+    </table>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
